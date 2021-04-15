@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="acc_dac">
+</Property><Property Name="解决方案文件" Value="F:\DAC_HMM\DAC_HMM\DAC_HMM\acc_dac.sln">
+</Property><Property Name="Date" Value="2020年10月21日">
+</Property><Property Name="Time" Value="20:09:49">
+</Property><Property Name="日志号" Value="2">
+</Property></Properties><Event ErrorLevel="0" Project="acc_dac" Source="acc_dac.vcproj" Description="Converting project file 'F:\DAC_HMM\DAC_HMM\DAC_HMM\acc_dac.vcproj'.">
+</Event><Event ErrorLevel="1" Project="acc_dac" Source="acc_dac.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="acc_dac" Source="acc_dac.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="acc_dac" Source="acc_dac.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="acc_dac" Source="acc_dac.vcproj" Description="Done converting to new project file 'F:\DAC_HMM\DAC_HMM\DAC_HMM\acc_dac.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="acc_dac" Source="acc_dac.vcproj" Description="Converted">
+</Event></UpgradeLog>

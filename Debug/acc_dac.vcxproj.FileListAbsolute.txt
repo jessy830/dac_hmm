@@ -1,0 +1,8 @@
+F:\DAC_HMM\DAC_HMM1\DAC_HMM\Debug\dac.exe
+F:\DAC_HMM\DAC_HMM1\DAC_HMM\Debug\dac.pdb
+F:\DAC_HMM\DAC_HMM1zy\DAC_HMM\Debug\dac.exe
+F:\DAC_HMM\DAC_HMM1zy\DAC_HMM\Debug\dac.pdb
+F:\DAC_HMM\DAC_HMM2zy\DAC_HMM\Debug\dac.exe
+F:\DAC_HMM\DAC_HMM2zy\DAC_HMM\Debug\dac.pdb
+F:\DAC_HMM\DAC_HMM\Debug\dac.exe
+F:\DAC_HMM\DAC_HMM\Debug\dac.pdb
