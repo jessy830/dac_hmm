@@ -1,10 +1,10 @@
 ﻿cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
   bill.cpp
-F:\DAC_HMM\DAC_HMM\bill.cpp(77,2): warning C4996: 'gcvt': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _gcvt. See online help for details.
-F:\DAC_HMM\DAC_HMM\bill.cpp(97,10): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-F:\DAC_HMM\DAC_HMM\bill.cpp(118,11): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-F:\DAC_HMM\DAC_HMM\bill.cpp(121,15): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-F:\DAC_HMM\DAC_HMM\bill.cpp(123,21): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-F:\DAC_HMM\DAC_HMM\bill.cpp(128,16): warning C4305: “+=”: 从“double”到“float”截断
+F:\DAC_HMM\dac_hmm\bill.cpp(77,2): warning C4996: 'gcvt': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _gcvt. See online help for details.
+F:\DAC_HMM\dac_hmm\bill.cpp(97,10): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+F:\DAC_HMM\dac_hmm\bill.cpp(119,11): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+F:\DAC_HMM\dac_hmm\bill.cpp(124,15): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+F:\DAC_HMM\dac_hmm\bill.cpp(126,21): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+F:\DAC_HMM\dac_hmm\bill.cpp(131,16): warning C4305: “+=”: 从“double”到“float”截断
 bill.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
-  acc_dac.vcxproj -> F:\DAC_HMM\DAC_HMM\Debug\dac.exe
+  acc_dac.vcxproj -> F:\DAC_HMM\dac_hmm\Debug\dac.exe

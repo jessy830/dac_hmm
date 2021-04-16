@@ -1,8 +1,5 @@
 /*
  Main program
- NTAILS->T
- n->N
- NPATHS->M
  */
 
 #include <stdio.h>
@@ -33,22 +30,24 @@ void expand(void);
 unsigned expandHMM(float p,float k);
 void error_exit(char *message);
 
-double p = 0.5, qs = 0.110028, qc = 0.0;
+unsigned m = 0;
+double p = 0.5;
 double ys[100001] = { 0.0 };
 int cell = 100000;
-
-//NTAILS->T
-#define NTAILS	15U
 unsigned src[BUF_SIZE], side[BUF_SIZE], error[BUF_SIZE];
-//n->N
-unsigned n = 1024, m = 0;
+
+/*
+experiment   parameters
+*/
+#define NTAILS	15U          /*   NTAILS->T  */
+unsigned n = 1024;           /*   n->N        */
+#define NPATHS	2048U        /*   NPATHS->M   */
 
 
 int	*O;		/* the observation sequence O[1..T]*/
 int	*q; 	/* the state sequence q[1..T] */
 HMM hmm; 	/* the HMM */
-//NPATHS->M
-#define NPATHS	2048U
+
 struct DAC_node{
 	unsigned low, high, code, ptr;
 	double metric;
@@ -106,8 +105,9 @@ int main(int argc, char *argv[]){
 	fclose(fp);
 	O = ivector(1, n); /* alloc space for observation sequence O */
 	q = ivector(1, n); /* alloc space for state sequence q */
-	
-	unsigned ntries = 100;
+
+	int flag = 0;      //if read inital spectrum files
+	unsigned ntries = 1000;
 	float rate = 0.0f;
 	unsigned nerr = 0;
 	float r = 0.0f;
@@ -117,7 +117,9 @@ int main(int argc, char *argv[]){
 		source("hmm");
 		float k = atof(argv[2]);		
 		while(1){// loop for rates
-			getDataCss(k);
+			if (flag == 1) {
+				getDataCss(k);
+			}
 			initLUTdac(p, k);
 			compress();
 			nerr = expandHMM(p, k);
@@ -128,13 +130,13 @@ int main(int argc, char *argv[]){
 			k += 0.01000;
 		}
 		r += k;
-		printf("CR %d, %f\n", m, (float)m/(float)n);
+		printf("%d, %f\n", m, (float)m/(float)n);
 		rate += float(m)/ float(n);
 		printf("\nk=%f , %d/%d decoding ok\n\n", k,i + 1,ntries);
 		
 	}
-	printf("mean R : %lf\n", r/ntries );
-	printf("(results of table II): %lf\n", rate/ntries);
+	printf("mean R(table II): %f\n", rate/ntries);
+	printf("DAC  (table III) : %lf\n", r/ntries);
 
 	// free HMM-related 
 	free_ivector(O, 1, n);
@@ -168,9 +170,7 @@ void source(char type[]){
 		byte c = (rand()<RAND_MAX*p);
 		if(c)	
 			putone(src, i);
-		if(!memcmp(type, "bsc", 3))			
-			c ^= (rand()<RAND_MAX*qs);
-		else if(!memcmp(type, "hmm", 3))	
+		if(!memcmp(type, "hmm", 3))	
 			c ^= (O[i+1]-1);
 		if(c)	
 			putone(side, i);
